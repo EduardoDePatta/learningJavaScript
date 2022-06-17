@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Overpass:wght@100;400;700&family=Patrick+Hand&display=swap');
+/*
+- White: hsl(0, 0%, 100%)
+- Light Grey: hsl(217, 12%, 63%)
+- Medium Grey: hsl(216, 12%, 54%)
+- Dark Blue: hsl(213, 19%, 18%)
+- Very Dark Blue: hsl(216, 12%, 8%)
+- Orange: hsl(25, 97%, 53%)
+*/
+:root {
+    --white: hsl(0, 0%, 100%);
+    --lightGrey: hsl(217, 12%, 63%);
+    --mediumGrey: hsl(216, 12%, 54%);
+    --dBlue: hsl(213, 19%, 18%);
+    --vdBlue: hsl(216, 12%, 8%);
+    --orange: hsl(25, 97%, 53%);
+    --error: hsl(25, 97%, 53%);
+    --success: darkgreen;
+    --font: 'Overpass';
+
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font);    
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--vdBlue);
+    background-image: linear-gradient(to bottom, var(--vdBlue), var(--orange), var(--vdBlue));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    background-color: var(--dBlue);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.226);
+    overflow: hidden;
+    color: var(--lightGrey);
+    min-width: 375px;
+    border: 3px groove var(--orange);
+}
+header{
+    background-color: var(--vdBlue);
+    padding: 20px; 
+}
+.form{
+    padding: 10px;
+}
+.form-control{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;    
+}
+.form-control label{
+    display: inline-block;
+    margin-bottom: 6px;
+}
+.form-control input{
+    border: 2px solid var(--mediumGrey);
+    display: block;
+    border-radius: 5px;
+    font-size: 18px;
+    width: 100%;
+    padding: 5px;
+}
+.form-control i{
+    position: absolute;
+    top: 35px;
+    right: 5px;
+    visibility: hidden;
+}
+.form-control small{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+    font-size: 15px;
+}
+.form button{
+    background-color: var(--vdBlue);
+    color: var(--lightGrey);
+    border: 2px solid var(--vdBlue);
+    font-size: 18px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 6px;
+}
+.form button:hover{
+    border-color: var(--orange);
+}
+/* Error and Success*/
+.form-control.success input{
+    border-color: var(--success);
+}
+.form-control.error input{
+    
+    border-color: var(--error);
+}
+.form-control.success i.fa-check-circle{
+    color: var(--success);
+    visibility: visible;
+}
+.form-control.error i.fa-exclamation-circle{
+    color: var(--error);
+    visibility: visible;
+}
+.form-control.error small{
+    color: var(--error);
+    visibility: visible;
+}
