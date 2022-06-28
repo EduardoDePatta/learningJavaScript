@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Evento</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <div id = "modToDisplay" class="dataInfDisplay">
+        <h1>Que pena ;(</h1>
+        <p>Parece que você veio tarde de mais. Aguarde o Próximo evento!</p>
+    </div>
+    <div id="modToHide" class="container">
+
+        <header>
+            <h1>Inscreva-se!</h1>
+            <h2 id="diaEscolhido"></h2>
+        </header>
+
+        <form id="form" class="form">
+            <!--Campo para o usuário informar o nome-->
+            <div class="form-control">
+                <label for="username">Nome de usuário</label>
+                <input type="text" id="username" placeholder="Digite seu nome.">
+            </div> 
+
+            <!--Campo para o usuário informar se é maior de idade-->
+            <div class="form-control">
+                <label>Você tem mais de 18 anos?</label>
+                <select name="idade" id="idade">
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
+                </select>
+            </div>
+
+            <!--Botão para adicionar membros no evento-->
+            <button type="button" id="btn" value="add" onclick="addUser()">Adicionar ao Evento</button> 
+        </form>
+        <div id="participantes"></div>
+
+
+    </div>
+
+    <!--scripts-->
+    <script src="./script/diaEvento.js"></script>
+    <script src="./script/check.js"></script>
+</body>
+</html>
